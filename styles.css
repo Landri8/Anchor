@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #4C4C4C;
+    --secondary-color: #929292;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper_container {
+    width: 100%;
+    height: max(689px ,100vh);
+    overflow: hidden;
+}
+
+.background_overlay {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.navbar {
+    width: min(1440px, 100%);
+    height: clamp(70px, 13vh, 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 10rem;
+    margin-inline: auto;
+}
+
+.nav_links {
+    list-style-type: none;
+}
+
+.nav_links > li {
+    float: left;
+    margin-inline: 1.5rem;
+}
+
+.nav_links > li > a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.nav_links > li > a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+
+    bottom: 0;
+    left: 0;
+
+    scale: 0;
+    transform-origin: right;
+    transition: scale 0.3s ease-in-out;
+}
+
+.nav_links > li > a:hover::after {
+    scale: 1;
+    transform-origin: left;
+}
+
+.main {
+    width: 100%;
+    height: clamp(459px, 70vh, 560px);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.main > h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 3.2rem;
+}
+
+.main > p {
+    color: var(--secondary-color);
+    font-size: 18px;
+    text-align: center;
+    margin-block: 0.8rem 3rem;
+}
+
+.main > button {
+    all: unset;
+    background-color: var(--primary-color);
+    padding: 0.8rem 1.4rem;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    gap: 7px;
+}
+
+.sponsor {
+    width: 100%;
+    height: clamp(160px, 17vh, 190px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3%;
+}

@@ -1,0 +1,5 @@
+Primary color = #4C4C4C
+Secondary color = #929292
+
+# all images and icons are in assets folder
+# all css styling are in styles.css
