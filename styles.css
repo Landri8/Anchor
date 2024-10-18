@@ -3,18 +3,18 @@
 :root {
     --primary-color: #4C4C4C;
     --secondary-color: #929292;
-  }
+}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .wrapper_container {
     width: 100%;
-    height: max(689px ,100vh);
+    height: max(689px, 100vh);
     overflow: hidden;
 }
 
@@ -47,7 +47,7 @@
 
 .nav_links > li > a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-color);
     position: relative;
 }
 
@@ -56,19 +56,18 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--primary-color);
 
     bottom: 0;
     left: 0;
 
     scale: 0;
-    transform-origin: right;
+    transform-origin: left;
     transition: scale 0.3s ease-in-out;
 }
 
 .nav_links > li > a:hover::after {
     scale: 1;
-    transform-origin: left;
 }
 
 .main {
@@ -76,7 +75,6 @@
     height: clamp(459px, 70vh, 560px);
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
 }
@@ -96,14 +94,17 @@
 
 .main > button {
     all: unset;
+    cursor: pointer;
+
     background-color: var(--primary-color);
     padding: 0.8rem 1.4rem;
     color: white;
     border-radius: 7px;
     border: 2px solid var(--primary-color);
-    cursor: pointer;
+
     display: flex;
     gap: 7px;
+    align-items: center;
 }
 
 .sponsor {

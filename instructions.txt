@@ -1,5 +1,9 @@
 Primary color = #4C4C4C
 Secondary color = #929292
 
+Font name = Poppins
+
 # all images and icons are in assets folder
 # all css styling are in styles.css
+
+# Before writing any codes, we have to layout our website first. The demo picture is in assets/images.
